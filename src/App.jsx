@@ -16,7 +16,6 @@ const App = () => {
                 return e
             })
         })
-
     }
     return (
         <>
