@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Card2 = ({ data, index, handleClick }) => {
-
     const { name, profession, friends } = data
     return (
         <div className='w-48 p-2 rounded-md overflow-hidden bg-zinc-200'>
