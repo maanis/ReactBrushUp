@@ -1,12 +1,13 @@
 import React from 'react'
 import UserCard from './userCard'
 
-const UserCards = () => {
+const UserCards = ({ data, removeUser }) => {
     return (
         <>
             <div className="flex p-2 gap-4 flex-wrap overflow-auto max-h-[60%]">
-                <UserCard />
-                <UserCard />
+                {data.map((item, index) => (
+                    <UserCard removeUser={removeUser} data={item} key={index} index={index} />
+                ))}
             </div>
         </>
     )
