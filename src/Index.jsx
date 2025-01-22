@@ -9,12 +9,11 @@ const Index = () => {
         setdata([...data, dets])
     }
     const removeUser = (index) => {
-        setdata(() => {
-            return data.filter((e, id) => id != index)
+        setdata((prev) => {
+            return prev.filter((e, id) => id != index)
         })
         console.log(data)
     }
-
 
     return (
         <>
