@@ -11,6 +11,7 @@ const Card = () => {
             {data.map((e, key) => (
                 <div key={key} className='w-32 h-56 p-1 rounded bg-zinc-100'>
                     <img src={e.img} className='h-[40%] w-full object-cover rounded' alt="" />
+
                     <p className='text-[10px] mt-2 text-zinc-600'>{e.desc}</p>
                     <button onClick={() => alert('bol bro')} className={`px-2 py-[2px] text-white ${e.inStock ? 'bg-blue-500' : 'bg-red-500'} rounded-full mt-2 text-[8px] font-semibold`}>Click here</button>
                 </div>
