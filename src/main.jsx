@@ -4,10 +4,14 @@ import './index.css'
 import App from './App.jsx'
 import FormHandeling from './components/FormHandeling.jsx'
 import Index from './Index.jsx'
+import RouterPractice from './RouterPractice.jsx'
+import { BrowserRouter } from 'react-router-dom'
 
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <Index />
-  </StrictMode>,
+  <BrowserRouter>
+    <StrictMode>
+      <RouterPractice />
+    </StrictMode>
+  </BrowserRouter>,
 )
