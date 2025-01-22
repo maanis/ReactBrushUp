@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Card2 from './components/Card2'
+import Navbar from './components/Navbar';
 
 const App = () => {
     const raw = [
@@ -19,10 +20,13 @@ const App = () => {
     }
     return (
         <>
-            <div className='h-screen w-full flex justify-center items-center gap-5'>
-                {data.map((item, index) => (
-                    <Card2 key={index} index={index} handleClick={handleClick} data={item} />
-                ))}
+            <div className='h-screen w-full'>
+                <Navbar data={data} />
+                <div className="flex justify-center items-center gap-6 h-[90%]">
+                    {data.map((item, index) => (
+                        <Card2 key={index} index={index} handleClick={handleClick} data={item} />
+                    ))}
+                </div>
             </div>
         </>
     )
