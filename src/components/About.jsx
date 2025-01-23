@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const About = () => {
+
+    useEffect(() => {
+        console.log('About Component Mounted')
+        return () => {
+            console.log('About Component Unmounted')
+        }
+    }, [])
     return (
         <div className='flex flex-col items-center'>
             <h2 className='text-3xl font-semibold'>About</h2>
