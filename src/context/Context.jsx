@@ -19,7 +19,7 @@ const Context = (props) => {
             })
     };
     return (
-        <UserContext.Provider value={{ data, setdata, handleApiReq, useEffect }}>
+        <UserContext.Provider value={{ data, setdata, handleApiReq }}>
             {props.children}
         </UserContext.Provider>
     )

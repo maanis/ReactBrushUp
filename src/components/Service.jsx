@@ -13,7 +13,10 @@ const Service = () => {
     //             console.log(err)
     //         })
     // }, [])
-    const { handleApiReq, useEffect, data } = useContext(UserContext)
+    useEffect(() => {
+        alert('Service component mounted')
+    })
+    const { handleApiReq, data } = useContext(UserContext)
     return (
 
         <>

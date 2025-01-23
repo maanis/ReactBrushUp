@@ -8,6 +8,9 @@ const About = () => {
             console.log('About Component Unmounted')
         }
     }, [])
+    useEffect(() => {
+        alert('About component mounted')
+    }, [])
     return (
         <div className='flex flex-col items-center'>
             <h2 className='text-3xl font-semibold'>About</h2>
