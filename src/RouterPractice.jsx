@@ -5,6 +5,7 @@ import User from './components/User'
 import About from './components/About'
 import Home from './components/Home'
 import UserDets from './components/UserDets'
+import Service from './components/Service'
 
 const RouterPractice = () => {
     return (
@@ -18,6 +19,7 @@ const RouterPractice = () => {
                         <Route path="/user/:name" element={<UserDets />} />
                     </Route>
                     <Route path="/about" element={<About />} />
+                    <Route path="/service" element={<Service />} />
                 </Routes>
                 <hr />
             </div>
