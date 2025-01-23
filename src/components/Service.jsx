@@ -1,24 +1,13 @@
 import axios from 'axios'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
+import { UserContext } from '../context/Context'
 
 const Service = () => {
-    const button = useRef(null)
-    const [data, setdata] = useState([]);
-    const url = 'https://fakestoreapi.com/products'
-    useEffect(() => {
-        axios.get(url)
-            .then((res) => {
-                setdata(res.data)
-                console.log(res.data)
-            })
-            .catch((err) => {
-                console.log(err)
-            })
-    }, [button])
+    const { handleApiReq, data } = useContext(UserContext)
     return (
 
         <>
-            <button ref={button} className='px-3 py-1 bg-orange-600 rounded-md mt-3 text-white font-semibold'>Api</button>
+            <button onClick={handleApiReq} className='px-3 py-1 bg-orange-600 rounded-md mt-3 text-white font-semibold'>Api</button>
             <div className='mt-4'>
                 {data.length > 0 ? data.map((item) => {
                     return (

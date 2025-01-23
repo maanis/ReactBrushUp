@@ -1,8 +1,36 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 
-const Context = () => {
+export const UserContext = React.createContext()
+
+const Context = (props) => {
+    console.log(props)
+    const [data, setdata] = useState([]);
+    const url = 'https://fakestoreapi.com/products'
+    // useEffect(() => {
+    //     axios.get(url)
+    //         .then((res) => {
+    //             setdata(res.data)
+    //             console.log(res.data)
+    //         })
+    //         .catch((err) => {
+    //             console.log(err)
+    //         })
+    // }, [])
+    const handleApiReq = () => {
+        axios.get(url)
+            .then((res) => {
+                setdata(res.data)
+                console.log(res.data)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    };
     return (
-        <div>Context</div>
+        <UserContext.Provider value={{ data, setdata, handleApiReq }}>
+            {props.children}
+        </UserContext.Provider>
     )
 }
 
