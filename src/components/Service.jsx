@@ -18,7 +18,7 @@ const Service = () => {
     return (
 
         <>
-            <button className='px-3 py-1 bg-orange-600 rounded-md mt-3 text-white font-semibold'>Api</button>
+            <button ref={button} className='px-3 py-1 bg-orange-600 rounded-md mt-3 text-white font-semibold'>Api</button>
             <div className='mt-4'>
                 {data.length > 0 ? data.map((item) => {
                     return (
