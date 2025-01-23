@@ -7,16 +7,7 @@ const Context = (props) => {
     console.log(props)
     const [data, setdata] = useState([]);
     const url = 'https://fakestoreapi.com/products'
-    // useEffect(() => {
-    //     axios.get(url)
-    //         .then((res) => {
-    //             setdata(res.data)
-    //             console.log(res.data)
-    //         })
-    //         .catch((err) => {
-    //             console.log(err)
-    //         })
-    // }, [])
+
     const handleApiReq = () => {
         axios.get(url)
             .then((res) => {
@@ -28,7 +19,7 @@ const Context = (props) => {
             })
     };
     return (
-        <UserContext.Provider value={{ data, setdata, handleApiReq }}>
+        <UserContext.Provider value={{ data, setdata, handleApiReq, useEffect }}>
             {props.children}
         </UserContext.Provider>
     )

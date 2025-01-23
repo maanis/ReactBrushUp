@@ -3,7 +3,17 @@ import React, { useContext, useEffect, useRef, useState } from 'react'
 import { UserContext } from '../context/Context'
 
 const Service = () => {
-    const { handleApiReq, data } = useContext(UserContext)
+    // useEffect(() => {
+    //     axios.get(url)
+    //         .then((res) => {
+    //             setdata(res.data)
+    //             console.log(res.data)
+    //         })
+    //         .catch((err) => {
+    //             console.log(err)
+    //         })
+    // }, [])
+    const { handleApiReq, useEffect, data } = useContext(UserContext)
     return (
 
         <>
